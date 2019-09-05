@@ -2,8 +2,8 @@ version: '3.4'
 
 services:
   ddc:
-    build: .
+    image: luniki/deep_doc_class
     volumes:
       - './files:/files'
       - './results:/results'
-    command: ["tail", "-f", "/dev/null"]
+    command: ["./classify.run", "-fp", "../files", "-meta", "../files/metadata.csv"]
