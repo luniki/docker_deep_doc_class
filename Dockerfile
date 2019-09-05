@@ -39,4 +39,4 @@ RUN ln -s /files
 RUN ln -s /results
 
 WORKDIR /opt/deep_doc_class/src
-CMD ["/bin/bash"]
+CMD ["tail", "-f", "/dev/null"]
