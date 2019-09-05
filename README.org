@@ -1,0 +1,23 @@
+#+TITLE: Docker für deep_doc_class
+#+LANGUAGE: de
+#+OPTIONS: toc:nil
+#+OPTIONS: author:nil
+#+OPTIONS: num:0
+
+* Docker for deep_doc_class
+
+You have to install docker and docker-compose for this to work.
+
+#+BEGIN_SRC bash :results drawer
+git clone https://github.com/luniki/docker_deep_doc_class.git
+cd docker_deep_doc_class
+#+END_SRC
+
+Now place your PDFs and the file "metadata.csv" into the directory
+"./files" and start the classification:
+
+#+BEGIN_SRC bash :results drawer
+docker-compose up
+#+END_SRC
+
+Your results can then be found in "./results".
