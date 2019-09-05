@@ -21,11 +21,11 @@ ENV PATH=/root/miniconda3/bin:$PATH
 
 # install deep_doc_class
 WORKDIR /tmp
-RUN wget 'https://github.com/luniki/deep_doc_class/archive/renato.zip' && unzip renato.zip
+RUN wget 'https://github.com/Odrec/deep_doc_class/archive/master.zip' && unzip master.zip
 
 RUN mkdir -p /opt/deep_doc_class
 WORKDIR /opt/deep_doc_class
-RUN mv /tmp/deep_doc_class-renato/* .
+RUN mv /tmp/deep_doc_class-master/* .
 
 ## remove problematic line; it's a Debian-specific thing
 RUN sed -i '/pkg-resources==0.0.0/d' requirements.txt
